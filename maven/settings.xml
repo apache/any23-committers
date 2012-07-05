@@ -22,65 +22,29 @@
 
   <servers>
     <server>
-      <id>people.apache.org</id>
-      <username>${committer.id}</username>
-      <filePermissions>664</filePermissions>
-      <directoryPermissions>775</directoryPermissions>
-    </server>
-    <server>
-      <id>apache.releases</id>
-      <username>${committer.id}</username>
-      <filePermissions>664</filePermissions>
-      <directoryPermissions>775</directoryPermissions>
-    </server>
-    <server>
-      <id>apache.website</id>
-      <username>${committer.id}</username>
-      <filePermissions>664</filePermissions>
-      <directoryPermissions>775</directoryPermissions>
-    </server>
-    <server>
-      <id>apache.snapshots</id>
-      <username>${committer.id}</username>
-      <filePermissions>664</filePermissions>
-      <directoryPermissions>775</directoryPermissions>
-    </server>
-    <server>
       <id>apache.snapshots.https</id>
       <username>${committer.id}</username>
-      <password>${committer.password}</password>
+      <password>${committer.encrypted.password}</password>
     </server>
     <server>
       <id>apache.releases.https</id>
       <username>${committer.id}</username>
-      <password>${committer.password}</password>
+      <password>${committer.encrypted.password}</password>
     </server>
   </servers>
 
   <profiles>
     <profile>
-      <id>apache.any23</id>
+      <id>apache</id>
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
         <mavenExecutorId>forked-path</mavenExecutorId>
-        <gpg.keyname>${gpg.keyname}</gpg.keyname>
+        <gpg.keyname>${gpg.keyname}</gpg.keyname>\
+        <!-- optional -->
         <gpg.passphrase>${gpg.passphrase}</gpg.passphrase>
       </properties>
-      <repositories>
-        <repository>
-          <id>any23-repository-external</id>
-          <url>http://any23.googlecode.com/svn/repo-ext</url>
-        </repository>
-        <!-- Specific repository for Aduna / Sesame related dependencies. -->
-        <repository>
-          <id>aduna-software-release-repo</id>
-          <name>Aduna SW Release Repository</name>
-          <url>http://repo.aduna-software.org/maven2/releases</url>
-          <layout>default</layout>
-        </repository>
-      </repositories>
     </profile>
   </profiles>
 
