@@ -44,11 +44,14 @@ function grabAll
 }
 
 cd sources
-grabAll org.apache.any23 any23-sources-dist ${ANY23_VERSION}
+grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION}-src
 
 cd ../binaries
-grabAll org.apache.any23 any23-core ${ANY23_VERSION}
-grabAll org.apache.any23.plugins any23-core ${CRAWLER_VERSION}
-grabAll org.apache.any23.plugins any23-core ${HTML_SCRAPER_VERSION}
-grabAll org.apache.any23.plugins any23-core ${OFFICE_SCRAPER_VERSION}
-grabAll org.apache.any23 any23-service ${ANY23_VERSION}
+grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION}
+grabAll org.apache.any23.plugins apache-any23-basic-crawler ${CRAWLER_VERSION}
+grabAll org.apache.any23.plugins apache-any23-html-scraper ${HTML_SCRAPER_VERSION}
+grabAll org.apache.any23.plugins apache-any23-office-scraper ${OFFICE_SCRAPER_VERSION}
+
+for classifier in with-deps without-deps server-embedded; do
+    grabAll org.apache.any23 apache-any23-service ${ANY23_VERSION}-classifier
+done
