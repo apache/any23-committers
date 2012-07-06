@@ -28,23 +28,36 @@ function grab
     GROUP_ID=${1}
     ARTIFACT_ID=${2}
     VERSION=${3}
-    PACKAGING=${4}
-    wget --no-check-certificate ${REPO_BASE}-${REPO_ID}/$(echo $GROUP_ID | sed 's/\./\//g')/${ARTIFACT_ID}/${VERSION}/${ARTIFACT_ID}-${VERSION}.${PACKAGING}
+    CLASSIFIER=${4}
+    PACKAGING=${5}
+
+    if [ -z "${CLASSIFIER}" ]; then
+        CLASSIFIED_VERSION=${VERSION}-${CLASSIFIER}
+    else
+        CLASSIFIED_VERSION=${VERSION}
+    fi
+
+    wget --no-check-certificate ${REPO_BASE}-${REPO_ID}/$(echo $GROUP_ID | sed 's/\./\//g')/${ARTIFACT_ID}/${VERSION}/${ARTIFACT_ID}-${CLASSIFIED_VERSION}.${PACKAGING}
 }
 
 function grabAll
 {
+    GROUP_ID=${1}
+    ARTIFACT_ID=${2}
+    VERSION=${3}
+    CLASSIFIER=${4}
+
     for type in zip tar.gz; do
-        grab ${1} ${2} ${3} ${type}
+        grab ${GROUP_ID} ${ARTIFACT_ID} ${VERSION} ${CLASSIFIER} ${type}
 
         for ext in asc md5 sha1; do
-            grab ${1} ${2} ${3} ${type}.${ext}
+            grab ${GROUP_ID} ${ARTIFACT_ID} ${VERSION} ${CLASSIFIER} ${type}.${ext}
         done
     done
 }
 
 cd sources
-grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION}-src
+grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION} src
 
 cd ../binaries
 grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION}
@@ -53,5 +66,5 @@ grabAll org.apache.any23.plugins apache-any23-html-scraper ${HTML_SCRAPER_VERSIO
 grabAll org.apache.any23.plugins apache-any23-office-scraper ${OFFICE_SCRAPER_VERSION}
 
 for classifier in with-deps without-deps server-embedded; do
-    grabAll org.apache.any23 apache-any23-service ${ANY23_VERSION}-classifier
+    grabAll org.apache.any23 apache-any23-service ${ANY23_VERSION} ${classifier}
 done
