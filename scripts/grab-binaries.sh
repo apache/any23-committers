@@ -56,7 +56,7 @@ function grabAll
 }
 
 cd sources
-grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION} src
+grabAll org.apache.any23 apache-any23 ${ANY23_VERSION} src
 
 cd ../binaries
 grabAll org.apache.any23 apache-any23-core ${ANY23_VERSION}
