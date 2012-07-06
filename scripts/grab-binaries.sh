@@ -28,13 +28,12 @@ function grab
     GROUP_ID=${1}
     ARTIFACT_ID=${2}
     VERSION=${3}
-    CLASSIFIER=${4}
-    PACKAGING=${5}
+    PACKAGING=${4}
 
-    if [ -z "${CLASSIFIER}" ]; then
-        CLASSIFIED_VERSION=${VERSION}-${CLASSIFIER}
-    else
+    if [ -z "${5}" ]; then
         CLASSIFIED_VERSION=${VERSION}
+    else
+        CLASSIFIED_VERSION=${VERSION}-${5}
     fi
 
     wget --no-check-certificate ${REPO_BASE}-${REPO_ID}/$(echo $GROUP_ID | sed 's/\./\//g')/${ARTIFACT_ID}/${VERSION}/${ARTIFACT_ID}-${CLASSIFIED_VERSION}.${PACKAGING}
@@ -48,10 +47,10 @@ function grabAll
     CLASSIFIER=${4}
 
     for type in zip tar.gz; do
-        grab ${GROUP_ID} ${ARTIFACT_ID} ${VERSION} ${CLASSIFIER} ${type}
+        grab ${GROUP_ID} ${ARTIFACT_ID} ${VERSION} ${type} ${CLASSIFIER}
 
         for ext in asc md5 sha1; do
-            grab ${GROUP_ID} ${ARTIFACT_ID} ${VERSION} ${CLASSIFIER} ${type}.${ext}
+            grab ${GROUP_ID} ${ARTIFACT_ID} ${VERSION} ${type}.${ext} ${CLASSIFIER}
         done
     done
 }
