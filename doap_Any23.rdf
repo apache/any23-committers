@@ -37,6 +37,13 @@
     <download-page rdf:resource="http://incubator.apache.org/any23/download.html" />
     <programming-language>Java</programming-language>
     <category rdf:resource="http://projects.apache.org/category/content" />
+    <release>
+      <Version>
+        <name>Apache Any23 0.7.0-incubating</name>
+        <created>2012-07-16</created>
+        <revision>0.7.0-incubating</revision>
+      </Version>
+    </release>
     <repository>
       <SVNRepository>
         <location rdf:resource="https://svn.apache.org/repos/asf/incubator/any23/trunk/"/>
