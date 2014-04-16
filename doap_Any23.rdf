@@ -21,20 +21,20 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-  <Project rdf:about="http://incubator.apache.org/any23">
+  <Project rdf:about="http://any23.apache.org">
     <created>2012-05-31</created>
     <license rdf:resource="http://usefulinc.com/doap/licenses/asl20" />
     <name>Apache Any23</name>
-    <homepage rdf:resource="http://incubator.apache.org/any23" />
-    <asfext:pmc rdf:resource="http://incubator.apache.org" />
+    <homepage rdf:resource="http://any23.apache.org" />
+    <asfext:pmc rdf:resource="http://any23.apache.org" />
     <shortdesc>Anything To Triples (Any23) is a library, a web service and a command line tool that extracts structured data in RDF format from a variety of Web documents.</shortdesc>
     <description>Apache Any23 is used in major Web of Data applications. It is written in Java and licensed under the Apache License v2.0. Apache Any23 can be used in various ways:
 * As a library in Java applications that consume structured data from the Web.
 * As a command-line tool for extracting and converting between the supported formats.
 * As online service API available at any23.org.</description>
     <bug-database rdf:resource="https://issues.apache.org/jira/browse/ANY23" />
-    <mailing-list rdf:resource="http://incubator.apache.org/any23/mail-lists.html" />
-    <download-page rdf:resource="http://incubator.apache.org/any23/download.html" />
+    <mailing-list rdf:resource="http://any23.apache.org/mail-lists.html" />
+    <download-page rdf:resource="http://any23.apache.org//download.html" />
     <programming-language>Java</programming-language>
     <category rdf:resource="http://projects.apache.org/category/content" />
     <release>
@@ -60,14 +60,14 @@
     </release>
     <repository>
       <SVNRepository>
-        <location rdf:resource="https://svn.apache.org/repos/asf/incubator/any23/trunk/"/>
-        <browse rdf:resource="http://svn.apache.org/viewvc/incubator/any23/"/>
+        <location rdf:resource="https://svn.apache.org/repos/asf/any23/trunk/"/>
+        <browse rdf:resource="http://svn.apache.org/viewvc/any23/trunk"/>
       </SVNRepository>
     </repository>
     <maintainer>
       <foaf:Person>
         <foaf:name>Apache Any23 Development Team</foaf:name>
-          <foaf:mbox rdf:resource="mailto:any23-dev@incubator.apache.org"/>
+          <foaf:mbox rdf:resource="mailto:any23@any23.apache.org"/>
       </foaf:Person>
     </maintainer>
     <asfext:implements><asfext:Standard>
