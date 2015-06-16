@@ -116,7 +116,7 @@
     </asfext:Standard></asfext:implements>
     <asfext:implements><asfext:Standard>
       <asfext:title>Microformats</asfext:title>
-      <asfext:body></asfext:body>
+      <asfext:body>Microformats</asfext:body>
       <asfext:id>Microformats</asfext:id>
       <asfext:url rdf:resource="http://microformats.org/"/>
     </asfext:Standard></asfext:implements>
