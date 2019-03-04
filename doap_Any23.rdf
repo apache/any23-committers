@@ -39,6 +39,20 @@
     <category rdf:resource="http://projects.apache.org/category/content" />
     <release>
       <Version>
+        <name>Apache Any23 2.3</name>
+        <created>2019-03-04</created>
+        <revision>2.3</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Any23 2.2</name>
+        <created>2018-03-01</created>
+        <revision>2.2</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
         <name>Apache Any23 2.1</name>
         <created>2017-11-01</created>
         <revision>2.1</revision>
