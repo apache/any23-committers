@@ -39,6 +39,20 @@
     <category rdf:resource="http://projects.apache.org/category/content" />
     <release>
       <Version>
+        <name>Apache Any23 2.5</name>
+        <created>2021-09-10</created>
+        <revision>2.5</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
+        <name>Apache Any23 2.4</name>
+        <created>2020-10-06</created>
+        <revision>2.4</revision>
+      </Version>
+    </release>
+    <release>
+      <Version>
         <name>Apache Any23 2.3</name>
         <created>2019-03-04</created>
         <revision>2.3</revision>
@@ -109,14 +123,14 @@
     <maintainer>
       <foaf:Person>
         <foaf:name>Apache Any23 Development Team</foaf:name>
-          <foaf:mbox rdf:resource="mailto:any23@any23.apache.org"/>
+          <foaf:mbox rdf:resource="mailto:dev@any23.apache.org"/>
       </foaf:Person>
     </maintainer>
     <asfext:implements><asfext:Standard>
       <asfext:title>RDF/XML</asfext:title>
       <asfext:body>W3C</asfext:body>
       <asfext:id>W3C RDF/XML</asfext:id>
-      <asfext:url rdf:resource="http://www.w3.org/TR/REC-rdf-syntax/"/>
+      <asfext:url rdf:resource="https://www.w3.org/TR/rdf-syntax-grammar/"/>
     </asfext:Standard></asfext:implements>
     <asfext:implements><asfext:Standard>
       <asfext:title>Turtle - Terse RDF Triple Language</asfext:title>
@@ -128,19 +142,19 @@
       <asfext:title>Notation 3</asfext:title>
       <asfext:body>W3C</asfext:body>
       <asfext:id>W3C Notation 3</asfext:id>
-      <asfext:url rdf:resource="http://www.w3.org/DesignIssues/Notation3"/>
+      <asfext:url rdf:resource="https://www.w3.org/TeamSubmission/n3/"/>
     </asfext:Standard></asfext:implements>
     <asfext:implements><asfext:Standard>
       <asfext:title>RDFa Primer</asfext:title>
       <asfext:body>W3C</asfext:body>
       <asfext:id>W3C RDFa Primer</asfext:id>
-      <asfext:url rdf:resource="http://www.w3.org/TR/xhtml-rdfa-primer/"/>
+      <asfext:url rdf:resource="https://www.w3.org/TR/rdfa-primer/"/>
     </asfext:Standard></asfext:implements>
     <asfext:implements><asfext:Standard>
       <asfext:title>RDFa1.1 prefix mechanism</asfext:title>
       <asfext:body>W3C</asfext:body>
       <asfext:id>W3C RDFa1.1 prefix mechanism</asfext:id>
-      <asfext:url rdf:resource="http://www.w3.org/TR/2010/WD-rdfa-core-20100422/#scoping-of-prefix-mappings"/>
+      <asfext:url rdf:resource="https://www.w3.org/TR/rdfa-core/#scoping-of-prefix-mappings"/>
     </asfext:Standard></asfext:implements>
     <asfext:implements><asfext:Standard>
       <asfext:title>Microformats</asfext:title>
@@ -152,7 +166,7 @@
       <asfext:title>HTML5 Microdata</asfext:title>
       <asfext:body>W3C</asfext:body>
       <asfext:id>W3C HTML5 Microdata</asfext:id>
-      <asfext:url rdf:resource="http://dev.w3.org/html5/md/"/>
+      <asfext:url rdf:resource="https://html.spec.whatwg.org/multipage/microdata.html#microdata"/>
     </asfext:Standard></asfext:implements>
     <asfext:implements><asfext:Standard>
       <asfext:title>CSV</asfext:title>
